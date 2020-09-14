@@ -48,9 +48,14 @@
                             <li class="nav-item">
                                 @Html.ActionLink("Contact", "Contact", "Home", routeValues: null, htmlAttributes: new { @class = "nav-link" })
                             </li>
-                            <li class="nav-item">
-                                @Html.ActionLink("Role", "Index", "Role", routeValues: null, htmlAttributes: new { @class = "nav-link" })
-                            </li>
+                            @{
+                                if (User.IsInRole("Admin"))
+                                {
+                                    <li class="nav-item">
+                                        @Html.ActionLink("Role", "Index", "Role", routeValues: null, htmlAttributes: new { @class = "nav-link" })
+                                    </li>
+                                }
+                            }
                         </ul>
                         @Html.Partial("_LoginPartial")
                     </div>

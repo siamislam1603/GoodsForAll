@@ -178,10 +178,15 @@
     <Compile Include="Migrations\202009091623444_InitialModel.Designer.cs">
       <DependentUpon>202009091623444_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009141331596_AddedNormalUser.cs" />
+    <Compile Include="Migrations\202009141331596_AddedNormalUser.Designer.cs">
+      <DependentUpon>202009141331596_AddedNormalUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NormalUser.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -448,6 +453,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202009091623444_InitialModel.resx">
       <DependentUpon>202009091623444_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009141331596_AddedNormalUser.resx">
+      <DependentUpon>202009141331596_AddedNormalUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

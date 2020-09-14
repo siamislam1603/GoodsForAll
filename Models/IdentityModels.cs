@@ -24,6 +24,7 @@ namespace GoodsForAll.Models
     }
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<NormalUser> NormalUsers { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

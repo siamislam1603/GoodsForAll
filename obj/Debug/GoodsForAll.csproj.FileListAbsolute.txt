@@ -107,3 +107,4 @@ F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.dll
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.pdb
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.InitialModel.resources
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.csproj.GenerateResource.cache
+F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedNormalUser.resources
