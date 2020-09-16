@@ -109,3 +109,7 @@ F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.InitialModel.resourc
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.csproj.GenerateResource.cache
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedNormalUser.resources
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedVolunter.resources
+F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedNameColumnToUsers.resources
+F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedPhoneColumnToUsers.resources
+F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.ChangedNumberLength.resources
+F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.DroppedColumnLocation.resources

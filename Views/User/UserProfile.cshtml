@@ -1,0 +1,54 @@
+﻿@model GoodsForAll.Models.NormalUser
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "UserProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="height: 93px;position: relative;background:#2A2C38"></div>
+<div class="container mt-5">
+    <div class="row">
+        <p class="text-success">@ViewBag.StatusMessage</p>
+        <div class="col-3">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row pl-2 pt-2 pb-2">
+                        <ion-icon name="person-circle-outline" class="userIcon"></ion-icon>
+                        <div class="col">
+                            <h4>
+                                @User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@'))
+                            </h4>
+                            Personal settings
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    @Html.ActionLink("Profile", "UserProfile", "User", new { id = User.Identity.GetUserId() }, new { @class = "anc-link active" })
+                </li>
+                <li class="list-group-item">
+                    @Html.ActionLink("Security", "ChangePassword", "Manage", null, new { @class = "anc-link" })
+                </li>
+            </ul>
+        </div>
+        <div class="col-9">
+            <h2>Public Profile</h2>
+            <hr />
+            @using (Html.BeginForm("UpdateUserProfile", "User"))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(c => c.name)
+                    @Html.TextBoxFor(c => c.name, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(c => c.phone)
+                    @Html.TextBoxFor(c => c.phone, new { @class = "form-control" })
+                </div>
+                @Html.HiddenFor(c => c.id)
+                <button type="submit" class="btn btn-success">Update Profile</button>
+            }
+
+
+        </div>
+    </div>
+</div>
+

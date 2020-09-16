@@ -7,7 +7,17 @@
 
     <ul class="nav navbar-nav navbar-right">
         <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "nav-link" })
+            @{
+                if (User.IsInRole("Admin"))
+                {
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "Index", "Manage", new { id = User.Identity.GetUserId() }, new { title = "Manage", @class = "nav-link" })
+                }
+                else
+                {
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "UserProfile", "User", new { id = User.Identity.GetUserId() }, new { title = "Manage", @class = "nav-link" })
+                }
+            }
+
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()" class="nav-link">Log off</a></li>
     </ul>

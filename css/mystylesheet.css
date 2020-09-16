@@ -1,0 +1,13 @@
+﻿.userIcon {
+    width: 30px;
+    height: 30px;
+}
+.anc-link{
+    color:black;
+}
+.anc-link:hover {
+    color: blue !important;
+}
+.anc-link.active {
+    color: #00C31E !important;
+}

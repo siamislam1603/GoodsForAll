@@ -47,7 +47,8 @@ namespace GoodsForAll
                       "~/css/magnific-popup.css",
                       "~/css/nice-select.css",
                       "~/css/slick.css",
-                      "~/css/style.css"
+                      "~/css/style.css",
+                      "~/css/mystylesheet.css"
                       ));
         }
     }

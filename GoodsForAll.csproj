@@ -171,6 +171,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,6 +186,22 @@
     <Compile Include="Migrations\202009141509184_AddedVolunter.cs" />
     <Compile Include="Migrations\202009141509184_AddedVolunter.Designer.cs">
       <DependentUpon>202009141509184_AddedVolunter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009161538174_AddedNameColumnToUsers.cs" />
+    <Compile Include="Migrations\202009161538174_AddedNameColumnToUsers.Designer.cs">
+      <DependentUpon>202009161538174_AddedNameColumnToUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009161615241_AddedPhoneColumnToUsers.cs" />
+    <Compile Include="Migrations\202009161615241_AddedPhoneColumnToUsers.Designer.cs">
+      <DependentUpon>202009161615241_AddedPhoneColumnToUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009161617099_ChangedNumberLength.cs" />
+    <Compile Include="Migrations\202009161617099_ChangedNumberLength.Designer.cs">
+      <DependentUpon>202009161617099_ChangedNumberLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009161804128_DroppedColumnLocation.cs" />
+    <Compile Include="Migrations\202009161804128_DroppedColumnLocation.Designer.cs">
+      <DependentUpon>202009161804128_DroppedColumnLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -208,6 +225,7 @@
     <Content Include="css\flaticon.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\magnific-popup.css" />
+    <Content Include="css\mystylesheet.css" />
     <Content Include="css\nice-select.css" />
     <Content Include="css\owl.carousel.min.css" />
     <Content Include="css\progress.css" />
@@ -439,9 +457,11 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Details.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="Views\User\UserProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -465,6 +485,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009141509184_AddedVolunter.resx">
       <DependentUpon>202009141509184_AddedVolunter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009161538174_AddedNameColumnToUsers.resx">
+      <DependentUpon>202009161538174_AddedNameColumnToUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009161615241_AddedPhoneColumnToUsers.resx">
+      <DependentUpon>202009161615241_AddedPhoneColumnToUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009161617099_ChangedNumberLength.resx">
+      <DependentUpon>202009161617099_ChangedNumberLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009161804128_DroppedColumnLocation.resx">
+      <DependentUpon>202009161804128_DroppedColumnLocation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
