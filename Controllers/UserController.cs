@@ -22,6 +22,16 @@ namespace GoodsForAll.Controllers
         [HttpPost]
         public ActionResult UpdateUserProfile(NormalUser normalUser)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new NormalUser
+                {
+                    name = normalUser.name,
+                    phone = normalUser.phone,
+                    location = normalUser.location
+                };
+                return View("UserProfile", viewModel);
+            }
             if (normalUser.id == null)
                 context.NormalUsers.Add(normalUser);
             else

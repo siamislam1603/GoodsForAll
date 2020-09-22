@@ -8,7 +8,6 @@
 <div style="height: 93px;position: relative;background:#2A2C38"></div>
 <div class="container mt-5">
     <div class="row">
-        <p class="text-success">@ViewBag.StatusMessage</p>
         <div class="col-3">
             <ul class="list-group">
                 <li class="list-group-item">
@@ -38,14 +37,17 @@
                 <div class="form-group">
                     @Html.LabelFor(c => c.name)
                     @Html.TextBoxFor(c => c.name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(c=>c.name,"", new { @class = "text-danger" })
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(c => c.phone)
                     @Html.TextBoxFor(c => c.phone, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(c=>c.phone,"", new { @class = "text-danger" })
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(c => c.location)
                     @Html.TextBoxFor(c => c.location, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(c=>c.location)
                 </div>
                 @Html.HiddenFor(c => c.id)
                 <button type="submit" class="btn btn-success">Update Profile</button>
