@@ -29,6 +29,7 @@ namespace GoodsForAll.Controllers
                 var userInDb = context.NormalUsers.Single(c => c.id == normalUser.id);
                 userInDb.name = normalUser.name;
                 userInDb.phone = normalUser.phone;
+                userInDb.location = normalUser.location;
             }
             context.SaveChanges();
             return RedirectToAction("UserProfile", "User",new { id = User.Identity.GetUserId() });

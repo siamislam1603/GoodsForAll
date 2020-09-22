@@ -158,6 +158,7 @@ namespace GoodsForAll.Controllers
             foreach (var role in RoleManager.Roles)
                 list.Add(new SelectListItem() { Value = role.Name, Text = role.Name });
             ViewBag.Roles = list;
+            ViewBag.message = "";
             return View();
         }
 
@@ -203,11 +204,16 @@ namespace GoodsForAll.Controllers
 
                     return RedirectToAction("Index", "Home");
                 }
-                AddErrors(result);
+                //AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            List<SelectListItem> list = new List<SelectListItem>();
+            foreach (var role in RoleManager.Roles)
+                list.Add(new SelectListItem() { Value = role.Name, Text = role.Name });
+            ViewBag.Roles = list;
+            ViewBag.message = "Invalid Information";
+            return View("Register");
         }
 
         //

@@ -11,3 +11,9 @@
 .anc-link.active {
     color: #00C31E !important;
 }
+.field-validation-error {
+    color: red !important;
+}
+.input-validation-error{
+    border:2px solid red;
+}

@@ -172,6 +172,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\VolunterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -202,6 +203,10 @@
     <Compile Include="Migrations\202009161804128_DroppedColumnLocation.cs" />
     <Compile Include="Migrations\202009161804128_DroppedColumnLocation.Designer.cs">
       <DependentUpon>202009161804128_DroppedColumnLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009191614306_AddedLocationColumn.cs" />
+    <Compile Include="Migrations\202009191614306_AddedLocationColumn.Designer.cs">
+      <DependentUpon>202009191614306_AddedLocationColumn.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -458,6 +463,7 @@
     <Content Include="Views\Role\Details.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
     <Content Include="Views\User\UserProfile.cshtml" />
+    <Content Include="Views\Volunter\UserProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -497,6 +503,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009161804128_DroppedColumnLocation.resx">
       <DependentUpon>202009161804128_DroppedColumnLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009191614306_AddedLocationColumn.resx">
+      <DependentUpon>202009191614306_AddedLocationColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

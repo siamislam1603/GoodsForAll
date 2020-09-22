@@ -17,5 +17,6 @@ namespace GoodsForAll.Models
         [DataType(DataType.PhoneNumber)]
         [StringLength(11)]
         public string phone { get; set; }
+        public string location { get; set; }
     }
 }

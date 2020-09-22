@@ -43,6 +43,10 @@
                     @Html.LabelFor(c => c.phone)
                     @Html.TextBoxFor(c => c.phone, new { @class = "form-control" })
                 </div>
+                <div class="form-group">
+                    @Html.LabelFor(c => c.location)
+                    @Html.TextBoxFor(c => c.location, new { @class = "form-control" })
+                </div>
                 @Html.HiddenFor(c => c.id)
                 <button type="submit" class="btn btn-success">Update Profile</button>
             }

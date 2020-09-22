@@ -10,12 +10,17 @@
             @{
                 if (User.IsInRole("Admin"))
                 {
-                    @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "Index", "Manage", new { id = User.Identity.GetUserId() }, new { title = "Manage", @class = "nav-link" })
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "ChangePassword", "Manage", new { id = User.Identity.GetUserId() }, new { title = "Manage", @class = "nav-link" })
                 }
-                else
+                else if(User.IsInRole("User"))
                 {
                     @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "UserProfile", "User", new { id = User.Identity.GetUserId() }, new { title = "Manage", @class = "nav-link" })
                 }
+                else if(User.IsInRole("Volunter"))
+                {
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "UserProfile", "Volunter", new { id = User.Identity.GetUserId() }, new { title = "Manage", @class = "nav-link" })
+                }
+                
             }
 
         </li>

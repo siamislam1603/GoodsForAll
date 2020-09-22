@@ -113,3 +113,4 @@ F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedNameColumnToUse
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedPhoneColumnToUsers.resources
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.ChangedNumberLength.resources
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.DroppedColumnLocation.resources
+F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedLocationColumn.resources
