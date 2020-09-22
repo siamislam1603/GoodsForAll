@@ -219,6 +219,7 @@ namespace GoodsForAll.Controllers
         // GET: /Manage/ChangePassword
         public ActionResult ChangePassword()
         {
+            ViewBag.StatusMessage = "";
             return View();
         }
 
@@ -240,7 +241,8 @@ namespace GoodsForAll.Controllers
                 {
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                 }
-                return RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
+                ViewBag.StatusMessage = "Your password has been changed.";
+                return View("ChangePassword");
             }
             AddErrors(result);
             return View(model);
