@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -208,9 +209,19 @@
     <Compile Include="Migrations\202009191614306_AddedLocationColumn.Designer.cs">
       <DependentUpon>202009191614306_AddedLocationColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009221526362_AddedDonationType.cs" />
+    <Compile Include="Migrations\202009221526362_AddedDonationType.Designer.cs">
+      <DependentUpon>202009221526362_AddedDonationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221602198_AddedItemModel.cs" />
+    <Compile Include="Migrations\202009221602198_AddedItemModel.Designer.cs">
+      <DependentUpon>202009221602198_AddedItemModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DonationType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MyDBContext.cs" />
     <Compile Include="Models\NormalUser.cs" />
@@ -218,6 +229,8 @@
     <Compile Include="Models\Volunter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\DonationFormViewModel.cs" />
+    <Compile Include="ViewModels\RandomBlogsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -260,6 +273,8 @@
     <Content Include="img\blog\blog_2.png" />
     <Content Include="img\blog\blog_3.png" />
     <Content Include="img\blog\blog_4.png" />
+    <Content Include="img\blog\cloth.jpg" />
+    <Content Include="img\blog\food.jpg" />
     <Content Include="img\blog\learn_about_bg.png" />
     <Content Include="img\blog\single_blog_1.png" />
     <Content Include="img\blog\single_blog_2.png" />
@@ -464,10 +479,11 @@
     <Content Include="Views\Role\Delete.cshtml" />
     <Content Include="Views\User\UserProfile.cshtml" />
     <Content Include="Views\Volunter\UserProfile.cshtml" />
+    <Content Include="Views\Blog\DonationForm.cshtml" />
+    <Content Include="Views\Blog\Blogs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -506,6 +522,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009191614306_AddedLocationColumn.resx">
       <DependentUpon>202009191614306_AddedLocationColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221526362_AddedDonationType.resx">
+      <DependentUpon>202009221526362_AddedDonationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221602198_AddedItemModel.resx">
+      <DependentUpon>202009221602198_AddedItemModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

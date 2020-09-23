@@ -101,7 +101,6 @@ F:\3.2\ASP.NET\GoodsForAll\bin\Microsoft.Owin.Security.Twitter.xml
 F:\3.2\ASP.NET\GoodsForAll\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 F:\3.2\ASP.NET\GoodsForAll\bin\Microsoft.Owin.Security.OAuth.xml
 F:\3.2\ASP.NET\GoodsForAll\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.csprojAssemblyReference.cache
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.csproj.CopyComplete
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.dll
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.pdb
@@ -114,3 +113,6 @@ F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedPhoneColumnToUs
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.ChangedNumberLength.resources
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.DroppedColumnLocation.resources
 F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedLocationColumn.resources
+F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedDonationType.resources
+F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.csprojAssemblyReference.cache
+F:\3.2\ASP.NET\GoodsForAll\obj\Debug\GoodsForAll.Migrations.AddedItemModel.resources

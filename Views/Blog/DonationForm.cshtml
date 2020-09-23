@@ -1,0 +1,48 @@
+﻿@model GoodsForAll.ViewModels.DonationFormViewModel
+@{
+    ViewBag.Title = "DonationForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="height: 93px;position: relative;background:#2A2C38"></div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-8">
+            <h2>Donate Item Details</h2>
+            <hr />
+            @using (Html.BeginForm("UpdateBlog", "Blog"))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(c => c.item.name)
+                    @Html.TextBoxFor(c => c.item.name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(c => c.item.name, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(c => c.item.DonationTypeId, new { @class = "d-block" })
+                    <div class="btn-group">
+                        @Html.DropDownListFor(c => c.item.DonationTypeId, new SelectList(Model.donationtype, "id", "name"), new { @class = "form-control" })
+                        @Html.ValidationMessageFor(c => c.item.DonationTypeId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(c => c.item.location)
+                    @Html.TextBoxFor(c => c.item.location, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(c => c.item.location, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(c => c.item.date)
+                    @Html.TextBoxFor(c => c.item.date, "{0:d MMM yyyy}", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(c => c.item.date,"", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(c => c.item.quantity)
+                    @Html.TextBoxFor(c => c.item.quantity, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(c => c.item.quantity, "", new { @class = "text-danger" })
+                </div>
+                @Html.HiddenFor(c => c.item.id)
+                <button type="submit" class="btn btn-success">Update Blog</button>
+            }
+        </div>
+    </div>
+</div>
+

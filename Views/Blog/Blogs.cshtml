@@ -1,0 +1,130 @@
+﻿@model List<GoodsForAll.Models.Item>
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Blogs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- breadcrumb start-->
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner">
+                    <div class="breadcrumb_iner_item text-center">
+                        <h2>Blogs</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb start-->
+<!--================Blog Area =================-->
+<section class="blog_area section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
+                    @foreach (var items in Model)
+                    {
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                @{
+                                    if (items.DonationType.name == "Food")
+                                    {
+                                        <img class="card-img rounded-0" src="../../img/blog/food.jpg" alt="">
+                                    }
+                                    else
+                                    {
+                                        <img class="card-img rounded-0" src="../../img/blog/cloth.jpg" alt="">
+                                    }
+                                }
+
+                                <div class="blog_item_date">
+                                    <h3>@items.date.Date.ToString("dd")</h3>
+                                    <p>@items.date.Date.ToString("MMM")</p>
+                                </div>
+                            </div>
+
+                            <div class="blog_details">
+                                <div class="container">
+                                    <div class="row">
+                                        <ion-icon name="person-circle-outline" class="userIcon"></ion-icon>
+                                        <div class="col">
+                                            <h4>
+                                                @items.NormalUser.name
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="d-inline-block">
+                                    <h2>@items.name</h2>
+                                    <h6>Quantity:@items.quantity</h6>
+                                </div>
+                                <p class="mt-2">
+                                    Category: @items.DonationType.name<br />
+                                    Pickup Location: @items.location<br />
+                                    <div class="alert alert-danger d-inline-block" role="alert">Expire Date: @items.date.Date.ToString("d MMM yyyy")</div>
+                                </p>
+                                @{
+                                    if (User.Identity.GetUserId() != items.NormalUser.id)
+                                    {
+                                        <a href="#" class="genric-btn success circle">Request To Claim</a>
+                                    }
+                                    else
+                                    {
+                                        <a href='@Url.Action("EditBlogInfo", "Blog", new { id = items.id })' class="genric-btn warning circle">Edit Post</a>
+                                        <a href="#" class="genric-btn danger circle">Delete Post</a>
+                                    }
+                                }
+
+                            </div>
+                        </article>
+                        }
+                </div>
+
+            </div>
+            <div class="col-lg-4">
+                <div class="blog_right_sidebar">
+                    <aside class="single_sidebar_widget search_widget">
+                        <form action="#">
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder='Search Keyword'
+                                           onfocus="this.placeholder = ''"
+                                           onblur="this.placeholder = 'Search Keyword'">
+                                    <div class="input-group-append">
+                                        <button class="btn" type="button"><i class="ti-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button rounded-0 primary-bg text-white w-100 btn_1"
+                                    type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </aside>
+
+                    <aside class="single_sidebar_widget post_category_widget">
+                        <h4 class="widget_title">Category</h4>
+                        <ul class="list cat-list">
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <p>Food</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <p>Cloth</p>
+
+                                </a>
+                            </li>
+
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

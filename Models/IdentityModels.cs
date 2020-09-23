@@ -26,6 +26,8 @@ namespace GoodsForAll.Models
     {
         public DbSet<NormalUser> NormalUsers { get; set; }
         public DbSet<Volunter> Volunters { get; set; }
+        public DbSet<DonationType> DonationTypes { get; set; }
+        public DbSet<Item> Items { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
