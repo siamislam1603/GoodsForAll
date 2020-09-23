@@ -77,5 +77,15 @@ namespace GoodsForAll.Controllers
             };
             return View("DonationForm", viewModel);
         }
+        
+        public ActionResult DeleteBlog(int id)
+        {
+            var item = context.Items.SingleOrDefault(c => c.id == id);
+            if (item == null)
+                return HttpNotFound();
+            context.Items.Remove(item);
+            context.SaveChanges();
+            return RedirectToAction("Blogs");
+        }
     }
 }

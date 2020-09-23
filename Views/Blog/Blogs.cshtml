@@ -75,7 +75,7 @@
                                     else
                                     {
                                         <a href='@Url.Action("EditBlogInfo", "Blog", new { id = items.id })' class="genric-btn warning circle">Edit Post</a>
-                                        <a href="#" class="genric-btn danger circle">Delete Post</a>
+                                        <a href='@Url.Action("DeleteBlog", "Blog", new { id = items.id })' class="genric-btn danger circle">Delete Post</a>
                                     }
                                 }
 
